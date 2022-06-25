@@ -1,22 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import './About.scss'
 import { motion } from 'framer-motion'
+import { images } from '../../constants'
 
 const abouts = [
   { 
-    title: "Web Development",
+    title: "Front End Development",
     description: "I am a good web developer",
-    imgUrl: ''
+    imgUrl: images.about01
+  },
+  { 
+    title: "Back End Development",
+    description: "I am a good web developer",
+    imgUrl: images.about02
   },
   { 
     title: "Independent Learner",
     description: "Able to quickly and competently learn and then assimilate new languages, frameworks, and libraries",
-    imgUrl: ''
+    imgUrl: images.about03
   },
   { 
     title: "Motivated Team Member",
     description: "Communicative, nurturing, and reliable in group settings",
-    imgUrl: ''
+    imgUrl: images.about04
   }
 ]
 
@@ -24,11 +30,7 @@ const abouts = [
 const About = () => {
   return (
     <>
-      <h2 className="head-text">I Know That 
-      <span>Good Design</span>
-      <br />
-      means
-      <span>Good Business</span>
+      <h2 className="head-text">I Know That <span>Good Dev</span><br />means <span>Good Business</span>
       </h2>
 
       <div className="app__profiles">
