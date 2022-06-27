@@ -2,34 +2,23 @@ import React, { useState, useEffect } from 'react'
 import './About.scss'
 import { motion } from 'framer-motion'
 import { images } from '../../constants'
-
-const abouts = [
-  { 
-    title: "Front End Development",
-    description: "I am a good web developer",
-    imgUrl: images.about01
-  },
-  { 
-    title: "Back End Development",
-    description: "I am a good web developer",
-    imgUrl: images.about02
-  },
-  { 
-    title: "Independent Learner",
-    description: "Able to quickly and competently learn and then assimilate new languages, frameworks, and libraries",
-    imgUrl: images.about03
-  },
-  { 
-    title: "Motivated Team Member",
-    description: "Communicative, nurturing, and reliable in group settings",
-    imgUrl: images.about04
-  }
-]
-
+import { urlFor, client } from '../../client'
 
 const About = () => {
+
+  const [abouts, setAbouts] = useState([])
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]'
+
+    client.fetch(query)
+      .then((data) => setAbouts(data))
+  }, [])
+  
+
   return (
-    <>
+
+    <>      
       <h2 className="head-text">I Know That <span>Good Dev</span><br />means <span>Good Business</span>
       </h2>
 
