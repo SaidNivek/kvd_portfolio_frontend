@@ -16,9 +16,7 @@ const Skills = () => {
 
     client.fetch(query)
       .then((data) => {
-        console.log(data)
         setExperience(data)
-
       })
 
     client.fetch(skillsQuery)
@@ -49,30 +47,43 @@ const Skills = () => {
       </motion.div>
 
       <motion.div className="app__skills-exp">
-        {experience?.map((work) => (
-          work.year
-        ))}
-          {/* <>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
-              className="app__skills-exp-work"
-              data-tip
-              data-for={work.name}
-              key={work.name}
-            >
-              <h4 className="bold-text">{work.name}</h4>
-              <p className="p-text">{work.company}</p>
+        {experience?.map((experience) => (
+          <motion.div
+            className="app__skills-exp-item"
+            key={experience.year}
+          >
+            <div className="app__skills-exp-year">
+              <p className="bold-text">{experience.year}</p>
+            </div>
+            <motion.div className="app__skils-exp-works">
+              {console.log(experience)}
+              {experience?.works?.map((work) => (
+                <>
+                  <motion.div
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.5 }}
+                    className="app__skills-exp-work"
+                    data-tip
+                    data-for={work.name}
+                    key={work.name}
+                  >
+                    <h4 className="bold-text">{work.name}</h4>
+                    <p className="p-text">{work.company}</p>
+                  </motion.div>
+                  <ReactTooltip
+                    id={work.name}
+                    effect="solid"
+                    arrowColor="#fff"
+                    className="skills-tooltip"
+                  >
+                    {work.desc}
+                  </ReactTooltip>
+                </>
+              ))}
             </motion.div>
-            <ReactTooltip
-              id={work.name}
-              effect="solid"
-              arrowColor="#fff"
-              className="skills-tooltip"
-            >
-              {work.desc}
-            </ReactTooltip>
-          </> */}
+          </motion.div>
+
+        ))}
       </motion.div>
     </div>
     </>
