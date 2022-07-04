@@ -56,7 +56,6 @@ const Skills = () => {
               <p className="bold-text">{experience.year}</p>
             </div>
             <motion.div className="app__skils-exp-works">
-              {console.log(experience)}
               {experience?.works?.map((work) => (
                 <>
                   <motion.div
