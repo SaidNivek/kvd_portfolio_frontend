@@ -1,6 +1,6 @@
 #home {
     position: relative;
-    background: url('../../assets/bgIMG.png');
+    background: url('../../assets/bgWhite.png');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -160,7 +160,7 @@
     height: 100%;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
     position: relative;
 
@@ -168,6 +168,9 @@
         width: 100%;
         object-fit: contain;
         z-index: 1;
+        border-radius: 50%;
+        width: 75%;
+        height: auto;
     }
 
     .overlay_circle {
@@ -184,3 +187,8 @@
         margin: 2rem 0;
     }
 }
+
+// .app__header-profile-img {
+//     border-radius: 15%;
+//     height: 75%;
+// }
