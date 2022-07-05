@@ -5,7 +5,7 @@ import { images } from '../../constants'
 import { AppWrap } from '../../wrapper'
 import { BsDownload } from 'react-icons/bs'
 
-import KD_Resume from './Header'
+import KD_Resume from './KD_Resume.pdf'
 
 const scaleVariants = {
   whileInView: {
@@ -43,7 +43,7 @@ const Header = () => {
           </div>
 
           <div className="tag-cmp app__flex">
-            <a href={KD_Resume} download>
+            <a href={KD_Resume} download target="_blank" rel="noopener noreferrer">
               <button className="app__header-button">
                   <BsDownload />
               </button>
