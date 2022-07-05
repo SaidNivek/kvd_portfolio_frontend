@@ -71,6 +71,11 @@ const Footer = () => {
           </div>
       }
 
+        <div className="copyright">
+            <p className="p-text">&copy;{new Date().getFullYear()} Kevin Dias</p>
+            <p className="p-text">All rights reserved</p>
+        </div>
+
     </>
   )
 }
