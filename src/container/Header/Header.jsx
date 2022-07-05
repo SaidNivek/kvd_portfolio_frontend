@@ -3,6 +3,7 @@ import './Header.scss'
 import { motion } from 'framer-motion'
 import { images } from '../../constants'
 import { AppWrap } from '../../wrapper'
+import { BsDownload } from 'react-icons/bs'
 
 const scaleVariants = {
   whileInView: {
@@ -37,6 +38,15 @@ const Header = () => {
             <p className="p-text">Web Developer</p>
             <p className="p-text">Cat Dad</p>
             <p className="p-text">Gamer</p>
+          </div>
+
+          <div className="tag-cmp app__flex">
+            <a href="#" target="_blank" rel="noopener noreferrer" download>
+              <button>
+                  <BsDownload />
+                  Download File
+              </button>
+            </a>
           </div>
         </div>        
       </motion.div>
