@@ -5,6 +5,8 @@ import { images } from '../../constants'
 import { AppWrap } from '../../wrapper'
 import { BsDownload } from 'react-icons/bs'
 
+import KD_Resume from './Header'
+
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -41,12 +43,12 @@ const Header = () => {
           </div>
 
           <div className="tag-cmp app__flex">
-            <a href="#" target="_blank" rel="noopener noreferrer" download>
-              <button>
+            <a href={KD_Resume} download>
+              <button className="app__header-button">
                   <BsDownload />
-                  Download File
               </button>
             </a>
+            <p className="p-text">Download Résumé</p>
           </div>
         </div>        
       </motion.div>
