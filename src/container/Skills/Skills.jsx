@@ -16,7 +16,7 @@ const Skills = () => {
 
     client.fetch(query)
       .then((data) => {
-        setExperience(data)
+        setExperience(data.reverse())
       })
 
     client.fetch(skillsQuery)
